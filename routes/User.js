@@ -8,7 +8,7 @@ router.get('/:id?', function(req, res, next){
             if(err) {
                 res.json(err);
             } else {
-                res.json(rows);
+                res.json(rows[0]);
             }
         });
     } else{
@@ -47,7 +47,7 @@ router.put('/:id', function(req, res, next) {
         if(err) {
             res.json(err);
         } else {
-            res.json(rows);
+            res.json(rows[0]);
         }
     });
 });
