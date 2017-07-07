@@ -24,10 +24,10 @@ router.get('/:id?', function(req, res, next){
 
 router.post('/',function(req, res, next){
     User.addUser(req.body, function(err, count){
-        if(err) {
+        if (err) {
             res.json(err);
         } else {
-            res.json(req.body);
+            res.json(count);
         }
     });
 });

@@ -12,6 +12,7 @@ var User = {
     
     addUser: function(User, callback) {
         return db.query("Insert into users values(?,?,?,?,?)", [User.id, User.firstName, User.lastName, User.email, User.password], callback);
+        // return db.query('select * from users order by users.id desc limit 1');
     },
     
     deleteUser:function(id, callback) {
