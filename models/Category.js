@@ -29,3 +29,5 @@ var Category = {
         return db.query('delete from categories where id in (?)', [delarr], callback);
     }
 }
+
+module.exports = Category;
