@@ -9,7 +9,7 @@ var Category = {
         return db.query('select * from categories where id=?', [id], callback);
     },
     
-    addCategory: function(User, callback) {
+    addCategory: function(Category, callback) {
         return db.query('insert into categories values(?,?)', [Category.id, Category.name, Category.description], callback);
     },
     
@@ -17,7 +17,7 @@ var Category = {
         return db.query('delete from categories where id=?', [id], callback);
     },
 
-    updateCategory: function(id, User, callback) {
+    updateCategory: function(id, Category, callback) {
         return  db.query('update categories set name=?, description=?, where id=?', [Category.name, Category.description, id],callback);
     },
     
