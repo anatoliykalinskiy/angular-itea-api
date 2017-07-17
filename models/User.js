@@ -11,7 +11,7 @@ var User = {
     },
     
     addUser: function(User, callback) {
-        return db.query('insert into users values(?,?,?,?,?)', [User.id, User.firstName, User.lastName, User.email, User.password], callback);
+        return db.query('insert into users values(?,?,?,?,?,?)', [User.id, User.firstName, User.lastName, User.email, User.role, User.password], callback);
     },
     
     deleteUser:function(id, callback) {
